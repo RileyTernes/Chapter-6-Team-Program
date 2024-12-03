@@ -14,12 +14,12 @@ graph TD;
 #### Function Diagrams
 | `Main`    |               | Liam Dowell     |
 | ------------------ | ------------- | ------------ |
-| `Recieves no arguements`    | runs all of the programs such as menu, search, add, delete, and modify.  |  it outputs the programs            |
+| `Recieves no arguements`    | runs all of the programs such as menu, search, add, delete, and modify.  |  it outputs a thank you message            |
 
 ***
 | `Menu`    |               |  Liam Dowell     |
 | ------------------ | ------------- | ------------ |
-| recieves no arguements    | takes input from the user for the program they want to run |   it outputs it to main so main can run the program          |
+| recieves no arguements    | takes input from the user for the program they want to run |   it outputs the choices you can choose from         |
 
 ***
 | `Add`    |               |  author     |
