@@ -24,11 +24,10 @@ graph TD;
 | `time:integer`     | calculates ______  | outputs ____             |
 | `name:string`      | takes input for name ___ | returns total |
 ***
-| `Add`    |               |  author     |
+| `Add`    |               |  Riley Ternes     |
 | ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
+| `recieves no arguments`    | takes input from the user for name, street address, phone number, and email address|
+| `time:integer`     | writes the contact information to contact.txt |  outputs, "The contact information has been written. |
 ***
 | `Search`    |               |  author     |
 | ------------------ | ------------- | ------------ |
@@ -36,15 +35,15 @@ graph TD;
 | `time:integer`     | calculates ______  | outputs ____             |
 | `name:string`      | takes input for name ___ | returns total |
 ***
-| `Edit`    |               |  author     |
+| `Edit`    |               |  Riley Ternes     |
 | ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
+| `recieves no arguments`    | takes input from the user for the contact information it would like to edit|              |
+|      | edits the contact information to be the contact information given by the user |
+|       | writes it to contact.txt |
 ***
-| `Delete`    |               |  author     |
+| `Delete`    |               |  author    |
 | ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
+| `recieves no arguments`    | takes input from the user for ____  |              |
 | `time:integer`     | calculates ______  | outputs ____             |
 | `name:string`      | takes input for name ___ | returns total |
 ***
