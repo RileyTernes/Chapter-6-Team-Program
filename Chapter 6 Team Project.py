@@ -1,6 +1,9 @@
 #Chapter 6 Team Project
 
 def main():
+    #main recieves no arguements
+    #runs al of the programs
+    #outputs a thank you message
     choice = int(menu())
     
     while choice < 1 or choice > 5:
@@ -45,19 +48,14 @@ def add():
     #writes it to contact.txt
     #outputs a confirmation message
     #closes file
-    print('1')
     
 def search():
-    print('5')
     
     
 def edit():
     #opens file
     #takes
-    print('2')
 
 def delete():
-    print('3')
     
 def display():
-    print('4')
