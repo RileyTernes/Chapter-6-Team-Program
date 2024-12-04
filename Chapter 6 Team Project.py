@@ -21,6 +21,26 @@ def search():
     #searches for name that is asked for
     #prints the values of the associated name
     #closes the file
+    found = False
+    search = input("Enter the name of the person that you are looking for: ")
+    contact_file = open("contact.txt", 'r')
+    name = contact_file.readline()
+    while name != '':
+        street = contact_file.readline()
+        phone = contact_file.readline()
+        email = contact_file.readline()
+        name = name.rstrip("\n")
+        
+        if name.lower() == search.lower():
+            print("\n---Record found!---")
+            print(f"Name: {name}")
+            print(f"Street Address: {street}")
+            print(f"Phone Number: {phone}")
+            print(f"Email Address: {email}")
+            #you were copying Mr. hayes code.
+    
+    
+    
     
 def edit():
     #opens file
