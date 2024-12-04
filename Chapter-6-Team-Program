@@ -1,1 +1,11 @@
+def main():
+  #main recieves no arguements
+  #runs all of the programs 
+  #outputs a thank you message
+  choice = int(menu())
 
+  while choice < 1 and choice > 5:
+    print("Invalid response")
+  while choice != 6:
+    if choice == 1:
+      
