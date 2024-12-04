@@ -1,5 +1,9 @@
 #Chapter 6 Team Project
 import os
+<<<<<<< HEAD
+=======
+
+>>>>>>> a9682b216da9c205b562a09456b53b846f17687c
 def main():
     #calls menu to get choice
     #calls function according to choice
@@ -13,6 +17,7 @@ def add():
     #writes it to contact.txt
     #outputs a confirmation message
     #closes file
+<<<<<<< HEAD
     choice = 'y'
     infile = open("contact.txt", "a")
     while choice.lower() == 'y':
@@ -32,6 +37,15 @@ def add():
     infile.close()
     #confirm that it's written
     print("\nAll data appended to coffee.txt.")
+=======
+
+def search():
+    #Opens file
+    #searches for name that is asked for
+    #prints the values of the associated name
+    #closes the file
+    
+>>>>>>> a9682b216da9c205b562a09456b53b846f17687c
 def edit():
     #opens file
     #takes
