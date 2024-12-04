@@ -15,11 +15,14 @@ def add():
     #outputs a confirmation message
     #closes file
 
+
 def search():
     #Opens file
     #searches for name that is asked for
     #prints the values of the associated name
     #closes the file
+
+
     
 def edit():
     #opens file
