@@ -1,27 +1,26 @@
 #Chapter 6 Team Project
 
 def main():
-    #main recieves no arguements
-    #runs all of the programs 
-    #outputs a thank you message
     choice = int(menu())
-
-    while choice < 1 and choice > 5:
-        print("Invalid response")
+    
+    while choice < 1 or choice > 5:
+        print("INVALID")
+        choice = int(menu())
+    
     while choice != 6:
         if choice == 1:
             add()
-        if choice == 2:
+        elif choice == 2:
             search()
-        if choice == 3:
+        elif choice == 3:
             edit()
-        if choice == 4:
+        elif choice == 4:
             delete()
-        if choice == 5:
+        elif choice == 5:
             display()
         choice = int(menu())
-    print("Have a good day.")
-
+    print("Have a good day!")
+    
 def menu():
     #menu recieves no arguements
     #displays all of the options
@@ -35,7 +34,7 @@ def menu():
     print("5) Display all contacts")
     print("6) Exit")
 
-    choice = int(input("Select and option: "))
+    choice = int(input("Select an option: "))
 
     return choice
 
@@ -46,13 +45,19 @@ def add():
     #writes it to contact.txt
     #outputs a confirmation message
     #closes file
+    print('1')
+    
+def search():
+    print('5')
     
     
 def edit():
     #opens file
     #takes
+    print('2')
 
 def delete():
-
+    print('3')
     
 def display():
+    print('4')
