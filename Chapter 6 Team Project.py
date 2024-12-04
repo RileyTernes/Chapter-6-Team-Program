@@ -15,16 +15,12 @@ def add():
     #writes it to contact.txt
     #outputs a confirmation message
     #closes file
-<<<<<<< Updated upstream
-    
-=======
 
 def search():
     #Opens file
     #searches for name that is asked for
     #prints the values of the associated name
     #closes the file
->>>>>>> Stashed changes
     
 def edit():
     #opens file
