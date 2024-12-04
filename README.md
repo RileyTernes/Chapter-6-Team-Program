@@ -22,25 +22,23 @@ graph TD;
 | recieves no arguements    | takes input from the user for the program they want to run |   it outputs the choices you can choose from         |
 
 ***
-| `Add`    |               |  author     |
+| `Add`    |               |  Riley Ternes     |
 | ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
+| `recieves no arguments`    | takes input from the user for name, street address, phone number, and email address|
+| `time:integer`     | writes the contact information to contact.txt |  outputs, "The contact information has been written. |
 ***
 | `Search`    |               |  Braxton Hartley     |
 | ------------------ | ------------- | ------------ |
 | `argument: 1 input`    | takes input from the user for the contacts information that needs to be found  |   Will output the desired names info           |
+
+| `Edit`    |               |  Riley Ternes     |
+
 ***
-| `Edit`    |               |  author    |
-| ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
-***
+
 | `Delete`    |               |  Braxton Hartley     |
 | ------------------ | ------------- | ------------ |
 | `argument: `    | takes input from the user for The name that they wish to be deleted  |   It will delete the desired one           |
+
 ***
 | `Display`    |               |  Liam Dowell    |
 | ------------------ | ------------- | ------------ |
