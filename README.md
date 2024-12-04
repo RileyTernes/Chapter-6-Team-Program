@@ -30,8 +30,10 @@ graph TD;
 | `Search`    |               |  Braxton Hartley     |
 | ------------------ | ------------- | ------------ |
 | `argument: 1 input`    | takes input from the user for the contacts information that needs to be found  |   Will output the desired names info           |
-
-| `Edit`    |               |  Riley Ternes     |
+***
+| `Edit`    |               |  Riley Ternes      |
+| ------------------ | ------------- | ------------ |
+| `recieves no arguments`    | takes input from the user and changes the contacts information  |   outputs, "The contact information has been written.         |
 
 ***
 
