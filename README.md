@@ -12,17 +12,15 @@ graph TD;
   Main-->Display_All_Contacts;
 ```
 #### Function Diagrams
-| `Main`    |               |  author     |
+| `Main`    |               | Liam Dowell     |
 | ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
+| `Recieves no arguements`    | runs all of the programs such as menu, search, add, delete, and modify.  |  it outputs a thank you message            |
+
 ***
-| `Menu`    |               |  author     |
+| `Menu`    |               |  Liam Dowell     |
 | ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
+| recieves no arguements    | takes input from the user for the program they want to run |   it outputs the choices you can choose from         |
+
 ***
 | `Add`    |               |  author     |
 | ------------------ | ------------- | ------------ |
@@ -48,9 +46,8 @@ graph TD;
 | `time:integer`     | calculates ______  | outputs ____             |
 | `name:string`      | takes input for name ___ | returns total |
 ***
-| `Display`    |               |  author     |
+| `Display`    |               |  Liam Dowell    |
 | ------------------ | ------------- | ------------ |
-| `argument:type`    | takes input from the user for ____  |              |
-| `time:integer`     | calculates ______  | outputs ____             |
-| `name:string`      | takes input for name ___ | returns total |
+| it recieves no arguements    | it takes no inputs  |  it outputs all of the contacts stored            |
+
 ***
