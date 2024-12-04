@@ -1,4 +1,5 @@
 #Chapter 6 Team Project
+import os
 
 def main():
     #calls menu to get choice
@@ -15,14 +16,11 @@ def add():
     #outputs a confirmation message
     #closes file
 
-
 def search():
     #Opens file
     #searches for name that is asked for
     #prints the values of the associated name
     #closes the file
-
-
     
 def edit():
     #opens file
