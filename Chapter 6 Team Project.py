@@ -73,13 +73,13 @@ def search():
     #searches for name that is asked for
     #prints the values of the associated name
     #closes the file
-    pass
+    
 def edit():
     #opens file
     #takes
-    pass
+    
 def delete():
-    pass
+    
 def display():
     #display recieves no arguements
     #it displays all of the contacts
