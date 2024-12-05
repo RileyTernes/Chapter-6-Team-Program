@@ -1,9 +1,5 @@
 #Chapter 6 Team Project
 import os
-<<<<<<< HEAD
-=======
-
->>>>>>> a9682b216da9c205b562a09456b53b846f17687c
 def main():
     #calls menu to get choice
     #calls function according to choice
@@ -17,7 +13,6 @@ def add():
     #writes it to contact.txt
     #outputs a confirmation message
     #closes file
-<<<<<<< HEAD
     choice = 'y'
     infile = open("contact.txt", "a")
     while choice.lower() == 'y':
@@ -37,7 +32,6 @@ def add():
     infile.close()
     #confirm that it's written
     print("\nAll data appended to coffee.txt.")
-=======
 
 def search():
     #Opens file
@@ -45,7 +39,6 @@ def search():
     #prints the values of the associated name
     #closes the file
     
->>>>>>> a9682b216da9c205b562a09456b53b846f17687c
 def edit():
     #opens file
     #takes
@@ -54,3 +47,32 @@ def delete():
 
     
 def display():
+    #display recieves no arguements
+    #it displays all of the contacts
+    
+    if os.path.exists("contact.txt"):
+        contact_file = open('contact.txt', 'r')
+    else:
+        print("file not found")
+        print("\n")
+        return
+    name = contact_file.readline()
+    
+    while name != '':
+        street = contact_file.readline()
+        phone = contact_file.readline()
+        email = contact_file.readline()
+        name = name.rstrip('\n')
+        street = street.rstrip('\n')
+        phone = phone.rstrip('\n')
+        email = email.rstrip('\n')
+        print("----------------------------")
+        print(f"Name: {name}")
+        print(f"Street Address: {street}")
+        print(f"Phone Number: {phone}")
+        print(f"Email Address: {email}")
+        name = contact_file.readline()
+    print("----------------------------")
+    contact_file.close()
+    print("\nAll records retrieved.")
+        
