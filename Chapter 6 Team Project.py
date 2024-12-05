@@ -1,5 +1,5 @@
 #Chapter 6 Team Project
-
+import os
 def main():
     #main recieves no arguements
     #runs al of the programs
@@ -48,14 +48,42 @@ def add():
     #writes it to contact.txt
     #outputs a confirmation message
     #closes file
-    
+    pass
 def search():
-    
-    
+    pass
 def edit():
     #opens file
     #takes
-
+    pass
 def delete():
-    
+    pass
 def display():
+    #display recieves no arguements
+    #it displays all of the contacts
+    
+    if os.path.exists("contact.txt"):
+        contact_file = open('contact.txt', 'r')
+    else:
+        print("file not found")
+        print("\n")
+        return
+    name = contact_file.readline()
+    
+    while name != '':
+        street = contact_file.readline()
+        phone = contact_file.readline()
+        email = contact_file.readline()
+        name = name.rstrip('\n')
+        street = street.rstrip('\n')
+        phone = phone.rstrip('\n')
+        email = email.rstrip('\n')
+        print("----------------------------")
+        print(f"Name: {name}")
+        print(f"Street Address: {street}")
+        print(f"Phone Number: {phone}")
+        print(f"Email Address: {email}")
+        name = contact_file.readline()
+    print("----------------------------")
+    contact_file.close()
+    print("\nAll records retrieved.")
+        
