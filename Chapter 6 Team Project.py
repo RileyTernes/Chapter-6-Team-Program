@@ -38,12 +38,85 @@ def search():
     #searches for name that is asked for
     #prints the values of the associated name
     #closes the file
+<<<<<<< Updated upstream
+=======
+    try:
+        enter = 'y'
+        while enter.lower() != "n":
+            found = False
+            search = input("Enter the name of the person that you are looking for: ")
+            contact_file = open("contact.txt", 'r')
+            name = contact_file.readline()
+            while name != '':
+                street = contact_file.readline()
+                phone = contact_file.readline()
+                email = contact_file.readline()
+                name = name.rstrip("\n")
+                
+                if name.lower() == search.lower():
+                    print("\n---Record found!---")
+                    print(f"Name: {name}")
+                    print(f"Street Address: {street}")
+                    print(f"Phone Number: {phone}")
+                    print(f"Email Address: {email}")
+                    found = True
+                    enter = input("Would you like to continue? (y/n) ")
+                    break
+                name = contact_file.readline()
+            contact_file.close()
+            if not found:
+                print("Record not found")
+                enter = input("Would you like to continue? (y/n) ")
+    except Exception as err:
+        print(err)
+>>>>>>> Stashed changes
     
 def edit():
     #opens file
     #takes
 
 def delete():
+    try:
+        enter = 'y'
+        while enter.lower() != "n":
+            found = False
+            search = input("Please enter the name of the person's record you wish to delete: ")
+            contact_file = open("contact.txt", "r")
+            temp_file = open("temp.txt", "w")
+            name = contact_file.readline()
+            while name != '':
+                street = contact_file.readline()
+                phone = contact_file.readline()
+                email = contact_file.readline()
+                
+                name = name.rstrip("\n")
+                street = street.rstrip('\n')
+                phone = phone.rstrip('\n')
+                email = email.rstrip('\n')
+                
+                if search.lower() != name.lower():
+                    temp_file.write(name + '\n')
+                    temp_file.write(street + '\n')
+                    temp_file.write(phone + '\n')
+                    temp_file.write(email + '\n')
+                else:
+                    found = True
+                name = contact_file.readline()
+            contact_file.close()
+            temp_file.close()
+            
+            os.remove("contact.txt")
+            os.rename("temp.txt", "contact.txt")
+            
+            if not found:
+                print("Record not found.")
+                enter = input("Would you like to continue? (y/n) ")
+            else:
+                print(f"{search} had been deleted from coffee.txt")
+                enter = input("Would you like to continue? (y/n) ")
+    except Exception as err:
+        print(err)
+    
 
     
 def display():
