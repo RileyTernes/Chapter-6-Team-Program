@@ -126,7 +126,47 @@ def edit():
     
     
 def delete():
-    pass
+     try:
+        enter = 'y'
+        while enter.lower() != "n":
+            found = False
+            search = input("Please enter the name of the person's record you wish to delete: ")
+            contact_file = open("contact.txt", "r")
+            temp_file = open("temp.txt", "w")
+            name = contact_file.readline()
+            while name != '':
+                street = contact_file.readline()
+                phone = contact_file.readline()
+                email = contact_file.readline()
+                
+                name = name.rstrip("\n")
+                street = street.rstrip('\n')
+                phone = phone.rstrip('\n')
+                email = email.rstrip('\n')
+                
+                if search.lower() != name.lower():
+                    temp_file.write(name + '\n')
+                    temp_file.write(street + '\n')
+                    temp_file.write(phone + '\n')
+                    temp_file.write(email + '\n')
+                else:
+                    found = True
+                name = contact_file.readline()
+            contact_file.close()
+            temp_file.close()
+            
+            os.remove("contact.txt")
+            os.rename("temp.txt", "contact.txt")
+            
+            if not found:
+                print("Record not found.")
+                enter = input("Would you like to continue? (y/n) ")
+            else:
+                print(f"{search} had been deleted from coffee.txt")
+                enter = input("Would you like to continue? (y/n) ")
+    except Exception as err:
+        print(err)
+    
 def display():
     #display recieves no arguements
     #it displays all of the contacts
