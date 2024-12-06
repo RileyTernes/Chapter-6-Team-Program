@@ -16,7 +16,7 @@ def main():
         elif choice == 2:
             search()
         elif choice == 3:
-            edit()
+            edit(street, phone, email)
         elif choice == 4:
             delete()
         elif choice == 5:
@@ -73,13 +73,60 @@ def search():
     #searches for name that is asked for
     #prints the values of the associated name
     #closes the file
-    
+    pass
 def edit():
+    #edit recieves no arguements 
     #opens file
-    #takes
+    found = False
+    
+    search = input("Enter the name to modify: ")
+    new_street = input("Enter the new street address: ")
+    new_phone = input("Enter the new phone number: ")
+    new_email = input("Enter the new email address: ")
+    
+    contact_file = open('contact.txt', 'r')
+    temp_file = open('temp.txt', 'w')
+    
+    name = contact_file.readline()
+    while name != '':
+        new_street = contact_file.readline()
+        new_phone = contact_file.readline()
+        new_email = contact_file.readline()
+        name = name.rstrip('\n')
+        street = street.rstrip('\n')
+        phone = phone.rstrip('\n')
+        email = email.rstrip('\n')
+        if search.lower() == name.lower():
+            temp_file.write(name + '\n')
+            temp_file.write(new_street + '\n')
+            temp_file.write(new_phone + '\n')
+            temp_file.write(new_email + '\n')
+            found = True
+            break
+        else:
+            temp_file.write(name + '\n')
+            temp_file.write(street + '\n')
+            temp_file.write(phone + '\n')
+            temp_file.write(email + '\n')
+            
+        name = coffee_file.readline()
+        
+    contact_file.close()
+    temp_file.close()
+    
+    os.remove('contact.txt')
+    os.rename('temp.txt', 'contact.txt')
+    
+    if found == False:
+        print("\nRecord not found.")
+    else:
+        print(f"The contacts for {search} has been updated.")
+        
+    
+    
     
 def delete():
-    
+    pass
 def display():
     #display recieves no arguements
     #it displays all of the contacts
