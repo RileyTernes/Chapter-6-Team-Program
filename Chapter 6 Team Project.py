@@ -105,8 +105,52 @@ def search():
         print(err)
     
 def edit():
+    #edit recieves no arguements 
     #opens file
-    #takes
+    found = False
+    
+    search = input("Enter the name to modify: ")
+    new_street = input("Enter the new street address: ")
+    new_phone = input("Enter the new phone number: ")
+    new_email = input("Enter the new email address: ")
+    
+    contact_file = open('contact.txt', 'r')
+    temp_file = open('temp.txt', 'w')
+    
+    name = contact_file.readline()
+    while name != '':
+        street = contact_file.readline()
+        phone = contact_file.readline()
+        email = contact_file.readline()
+        name = name.rstrip('\n')
+        street = street.rstrip('\n')
+        phone = phone.rstrip('\n')
+        email = email.rstrip('\n')
+        if search.lower() == name.lower():
+            temp_file.write(name + '\n')
+            temp_file.write(new_street + '\n')
+            temp_file.write(new_phone + '\n')
+            temp_file.write(new_email + '\n')
+            found = True
+            break
+        else:
+            temp_file.write(name + '\n')
+            temp_file.write(street + '\n')
+            temp_file.write(phone + '\n')
+            temp_file.write(email + '\n')
+            
+        name = coffee_file.readline()
+        
+    contact_file.close()
+    temp_file.close()
+    
+    os.remove('contact.txt')
+    os.rename('temp.txt', 'contact.txt')
+    
+    if found == False:
+        print("\nRecord not found.")
+    else:
+        print(f"The contacts for {search} has been updated.")
     
 def delete():
 
