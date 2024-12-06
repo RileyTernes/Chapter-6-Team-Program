@@ -89,9 +89,9 @@ def edit():
     
     name = contact_file.readline()
     while name != '':
-        new_street = contact_file.readline()
-        new_phone = contact_file.readline()
-        new_email = contact_file.readline()
+        street = contact_file.readline()
+        phone = contact_file.readline()
+        email = contact_file.readline()
         name = name.rstrip('\n')
         street = street.rstrip('\n')
         phone = phone.rstrip('\n')
