@@ -224,4 +224,4 @@ def display():
     print("----------------------------")
     contact_file.close()
     print("\nAll records retrieved.")
-        
+main()
