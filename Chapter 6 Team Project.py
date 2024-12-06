@@ -139,7 +139,7 @@ def edit():
             temp_file.write(phone + '\n')
             temp_file.write(email + '\n')
             
-        name = coffee_file.readline()
+        name = contact_file.readline()
         
     contact_file.close()
     temp_file.close()
@@ -224,4 +224,4 @@ def display():
     print("----------------------------")
     contact_file.close()
     print("\nAll records retrieved.")
-        
+main()     
