@@ -398,9 +398,3 @@ def display():
     print("----------------------------")
     contact_file.close()
     print("\nAll records retrieved.")
-<<<<<<< HEAD
-        
-
-=======
-main()
->>>>>>> 4b79edf1dc37cda6984c98dbf1e959b56bc7a8fa
