@@ -75,10 +75,7 @@ def add():
     print("\nAll data appended to coffee.txt.")
 
 def search():
-#Opens file
-    #searches for name that is asked for
-    #prints the values of the associated name
-    #closes the file
+
 
     pass
 def edit():
