@@ -103,68 +103,7 @@ def search():
                 enter = input("Would you like to continue? (y/n) ")
     except Exception as err:
         print(err)
-    
-
-    try:
-        enter = 'y'
-        while enter.lower() != "n":
-            found = False
-            search = input("Enter the name of the person that you are looking for: ")
-            contact_file = open("contact.txt", 'r')
-            name = contact_file.readline()
-            while name != '':
-                street = contact_file.readline()
-                phone = contact_file.readline()
-                email = contact_file.readline()
-                name = name.rstrip("\n")
-                
-                if name.lower() == search.lower():
-                    print("\n---Record found!---")
-                    print(f"Name: {name}")
-                    print(f"Street Address: {street}")
-                    print(f"Phone Number: {phone}")
-                    print(f"Email Address: {email}")
-                    found = True
-                    enter = input("Would you like to continue? (y/n) ")
-                    break
-                name = contact_file.readline()
-            contact_file.close()
-            if not found:
-                print("Record not found")
-                enter = input("Would you like to continue? (y/n) ")
-    except Exception as err:
-        print(err)
-    
-    try:
-        enter = 'y'
-        while enter.lower() != "n":
-            found = False
-            search = input("Enter the name of the person that you are looking for: ")
-            contact_file = open("contact.txt", 'r')
-            name = contact_file.readline()
-            while name != '':
-                street = contact_file.readline()
-                phone = contact_file.readline()
-                email = contact_file.readline()
-                name = name.rstrip("\n")
-                
-                if name.lower() == search.lower():
-                    print("\n---Record found!---")
-                    print(f"Name: {name}")
-                    print(f"Street Address: {street}")
-                    print(f"Phone Number: {phone}")
-                    print(f"Email Address: {email}")
-                    found = True
-                    enter = input("Would you like to continue? (y/n) ")
-                    break
-                name = contact_file.readline()
-            contact_file.close()
-            if not found:
-                print("Record not found")
-                enter = input("Would you like to continue? (y/n) ")
-    except Exception as err:
-        print(err)
-    
+   
 def edit():
     #edit recieves no arguements 
     #opens file
