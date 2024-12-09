@@ -1,6 +1,5 @@
 #Chapter 6 Team Project
 import os
-
 def main():
     #main recieves no arguements
     #runs al of the programs
@@ -25,14 +24,10 @@ def main():
         choice = int(menu())
     print("Have a good day!")
     
-
 def menu():
     #menu recieves no arguements
     #displays all of the options
     #returns choice
-
-    pass
-
 
     print("Hello")
     print("1) Add a contact")
@@ -45,7 +40,6 @@ def menu():
     choice = int(input("Select an option: "))
 
     return choice
-
 
 
 def add():
@@ -75,179 +69,11 @@ def add():
     print("\nAll data appended to coffee.txt.")
 
 def search():
-#Opens file
+    #Opens file
     #searches for name that is asked for
     #prints the values of the associated name
     #closes the file
 
-    pass
-def edit():
-    #opens file
-    #takes
-    name = 'test'
-    street_address = 'test'
-    phone_adrress = 'test'
-    email_address = 'test'
-    
-    contact_file = open('contact.txt', 'r')
-    name = contact_file.readline
-    street_address = 'test'
-    phone_adrress = 'test'
-    email_address = 'test'
-    
-    option = 0
-    found = False
-    search = input("Enter the name of the current contact: ")
-    while option != 1 or 2 or 3:
-        print("Here are your options:\n")
-        print("Edit a street address(1)")
-        print("Edit a phone number(2)")
-        print("Edit a email address(3)")
-        option = int(input("What option do you want to choose? "))
-        if option != 1 or 2 or 3:
-            print("That is not a valid option. Please try again.")
-    
-    
-    temp_file = open('temp.txt', 'w')
-    name = contact_file.readline()
-    
-    while name != '':
-        #while there is a name
-        if option == 1:
-            #get new street address
-            new_street_address = input("Enter the new street address: ")
-            
-            street_address = contact_file.readline()
-            name = name.rstrip('\n')
-            street_address = street_address.rstrip('\n')
-            phone_number = phone_number.rstrip('/n')
-            email_address = email_address.rstrip('/n')
-            if search.lower() == name.lower():
-                temp_file.write(name + '\n')
-                temp_file.write(new_street_address + '\n')
-                temp_file.write(phone_number + '/n')
-                temp_file.write(email_address + '/n')
-                found = True
-            else:
-                temp_file.write(name + '\n')
-                temp_file.write(street_address + '\n')
-                temp_file.write(phone_number + '/n')
-                temp_file.write(email_address + '/n')
-            name = contact_file.readline()
-            
-            
-        elif option == 2:
-            new_phone_number = input("Enter the new phone number: ")
-            
-            phone_number = contact_file.readline()
-            name = name.rstrip('\n')
-            street_address = street_address.rstrip('\n')
-            phone_number = phone_number.rstrip('\n')
-            email_address = email_address.rstrip('\n')
-            
-            if search.lower() == name.lower():
-                temp_file.write(name + '\n')
-                temp_file.write(new_phone_number + '\n')
-                found = True
-            else:
-                temp_file.write(desc + '\n')
-                temp_file.write(qty + '\n')
-            desc = coffee_file.readline()
-        elif option == 3:
-             = contact_file.readline()
-            desc = desc.rstrip('\n')
-            qty = qty.rstrip('\n')
-            
-            if search.lower() == name.lower():
-                temp_file.write(desc + '\n')
-                temp_file.write(new_qty + '\n')
-                found = True
-            else:
-                temp_file.write(desc + '\n')
-                temp_file.write(qty + '\n')
-            desc = coffee_file.readline()
-    coffee_file.close()
-    temp_file.close()
-    os.remove('coffee.txt')
-    os.rename('temp.txt', 'coffee.txt')
-    
-    if found == False:
-        print("\nRecord not found.")
-    else:
-        print("The quantity for", search, "has been updated to", new_qty, "pounds.")
-    
-    if search.lower() != desc.lower():
-        temp_file.write(desc + '\n')
-        temp_file.write(qty + '\n')
-    else:
-        found = True
-def delete():
-    pass
-def display():
-    pass
-
-
-    try:
-        enter = 'y'
-        while enter.lower() != "n":
-            found = False
-            search = input("Enter the name of the person that you are looking for: ")
-            contact_file = open("contact.txt", 'r')
-            name = contact_file.readline()
-            while name != '':
-                street = contact_file.readline()
-                phone = contact_file.readline()
-                email = contact_file.readline()
-                name = name.rstrip("\n")
-                
-                if name.lower() == search.lower():
-                    print("\n---Record found!---")
-                    print(f"Name: {name}")
-                    print(f"Street Address: {street}")
-                    print(f"Phone Number: {phone}")
-                    print(f"Email Address: {email}")
-                    found = True
-                    enter = input("Would you like to continue? (y/n) ")
-                    break
-                name = contact_file.readline()
-            contact_file.close()
-            if not found:
-                print("Record not found")
-                enter = input("Would you like to continue? (y/n) ")
-    except Exception as err:
-        print(err)
-    
-
-    try:
-        enter = 'y'
-        while enter.lower() != "n":
-            found = False
-            search = input("Enter the name of the person that you are looking for: ")
-            contact_file = open("contact.txt", 'r')
-            name = contact_file.readline()
-            while name != '':
-                street = contact_file.readline()
-                phone = contact_file.readline()
-                email = contact_file.readline()
-                name = name.rstrip("\n")
-                
-                if name.lower() == search.lower():
-                    print("\n---Record found!---")
-                    print(f"Name: {name}")
-                    print(f"Street Address: {street}")
-                    print(f"Phone Number: {phone}")
-                    print(f"Email Address: {email}")
-                    found = True
-                    enter = input("Would you like to continue? (y/n) ")
-                    break
-                name = contact_file.readline()
-            contact_file.close()
-            if not found:
-                print("Record not found")
-                enter = input("Would you like to continue? (y/n) ")
-    except Exception as err:
-        print(err)
-    
     try:
         enter = 'y'
         while enter.lower() != "n":
@@ -364,7 +190,7 @@ def delete():
                 print("Record not found.")
                 enter = input("Would you like to continue? (y/n) ")
             else:
-                print(f"{search} had been deleted from contact.txt")
+                print(f"{search} had been deleted from coffee.txt")
                 enter = input("Would you like to continue? (y/n) ")
     except Exception as err:
         print(err)
@@ -398,3 +224,5 @@ def display():
     print("----------------------------")
     contact_file.close()
     print("\nAll records retrieved.")
+main()
+
