@@ -303,7 +303,7 @@ def delete():
                 print("Record not found.")
                 enter = input("Would you like to continue? (y/n) ")
             else:
-                print(f"{search} had been deleted from coffee.txt")
+                print(f"{search} had been deleted from contact.txt")
                 enter = input("Would you like to continue? (y/n) ")
     except Exception as err:
         print(err)
