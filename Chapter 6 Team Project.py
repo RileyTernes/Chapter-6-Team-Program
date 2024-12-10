@@ -132,7 +132,6 @@ def edit():
             temp_file.write(new_phone + '\n')
             temp_file.write(new_email + '\n')
             found = True
-            break
         else:
             temp_file.write(name + '\n')
             temp_file.write(street + '\n')
@@ -147,7 +146,7 @@ def edit():
     os.remove('contact.txt')
     os.rename('temp.txt', 'contact.txt')
     
-    if found == False:
+    if not found:
         print("\nRecord not found.")
     else:
         print(f"The contacts for {search} has been updated.")
